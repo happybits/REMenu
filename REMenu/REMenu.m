@@ -184,7 +184,7 @@
         button;
     });
 
-    CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? 64 : 0;
+    CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? rect.origin.y + 44 : 0;
 
     // Append new item views to REMenuView
     //
@@ -327,7 +327,7 @@
 
     self.isAnimating = YES;
 
-    CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? 44 + rect.origin.y : 0;
+    CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? 64 : 0;
 
     void (^closeMenu)(void) = ^{
         [UIView animateWithDuration:self.closeAnimationDuration
